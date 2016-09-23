@@ -6,10 +6,13 @@ import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ShareCompat;
+import android.support.v7.graphics.Palette;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
@@ -91,13 +94,8 @@ public class ArticleDetailFragment extends Fragment implements
 
         mPhotoView = (ImageView) mRootView.findViewById(R.id.backdrop);
 
-        //final Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.toolbar);
-        //getActivityCast().setSupportActionBar(toolbar);
-        //getActivityCast().getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         mCollapsingToolbar =
                 (CollapsingToolbarLayout) mRootView.findViewById(R.id.toolbar_layout);
-
 
         fab = (FloatingActionButton) mRootView.findViewById(R.id.fab);
 

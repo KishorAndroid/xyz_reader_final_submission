@@ -18,8 +18,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:collapsedTitleTextAppearance="@style/collapsedappbar"
+            app:expandedTitleTextAppearance="@style/expandedappbar"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
 
 
             <android.support.v7.widget.Toolbar
@@ -83,10 +85,10 @@
         android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:backgroundTint="@color/colorPrimary"
         android:src="@drawable/ic_share"
         app:borderWidth="0dp"
         app:fabSize="normal"
-        android:backgroundTint="@color/colorPrimary"
         app:layout_anchor="@id/scrollview"
         app:layout_anchorGravity="bottom|right"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
