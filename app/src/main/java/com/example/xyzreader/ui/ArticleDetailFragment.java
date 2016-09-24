@@ -28,6 +28,8 @@ import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 
+import org.w3c.dom.Text;
+
 /**
  * A fragment representing a single Article detail screen.
  */
@@ -109,6 +111,7 @@ public class ArticleDetailFragment extends Fragment implements
             return;
         }
 
+        TextView title = (TextView) mRootView.findViewById(R.id.article_title);
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
 
@@ -116,7 +119,8 @@ public class ArticleDetailFragment extends Fragment implements
             mRootView.setAlpha(0);
             mRootView.setVisibility(View.VISIBLE);
             mRootView.animate().alpha(1);
-            mCollapsingToolbar.setTitle(mCursor.getString(ArticleLoader.Query.TITLE));
+            mCollapsingToolbar.setTitle(getString(R.string.app_name));
+            title.setText(mCursor.getString(ArticleLoader.Query.TITLE));
             String subtitle = String.format(
                     getString(R.string.subtitle),
                     DateUtils.getRelativeTimeSpanString(
